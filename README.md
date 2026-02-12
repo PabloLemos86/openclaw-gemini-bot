@@ -1,0 +1,2 @@
+# openclaw-gemini-bot
+Desenvolvedor
