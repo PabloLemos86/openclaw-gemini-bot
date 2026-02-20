@@ -1,15 +1,31 @@
+# Agent Render Project
 
-# OpenClaw + Gemini + Telegram Bot
+## 1. Instalar dependências
 
-## Deploy no Render
+pip install -r requirements.txt
 
-1. Crie uma conta em https://render.com
-2. Crie um novo Web Service
-3. Conecte com seu GitHub
-4. Faça upload deste projeto
-5. Configure as variáveis de ambiente:
-   - TELEGRAM_TOKEN
-   - GEMINI_API_KEY
-6. Deploy automático será iniciado
+## 2. Definir variável de ambiente
 
-Bot ficará ativo após deploy.
+Linux/Mac:
+export GEMINI_API_KEY="SUA_CHAVE_AQUI"
+
+Windows:
+set GEMINI_API_KEY=SUA_CHAVE_AQUI
+
+## 3. Executar localmente
+
+uvicorn app.main:app --host 0.0.0.0 --port 8000
+
+Acesse:
+http://localhost:8000/docs
+
+## 4. Deploy no Render
+
+Build Command:
+pip install -r requirements.txt
+
+Start Command:
+uvicorn app.main:app --host 0.0.0.0 --port 10000
+
+Variável de ambiente:
+GEMINI_API_KEY=SUA_CHAVE_AQUI
